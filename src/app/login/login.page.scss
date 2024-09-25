@@ -1,0 +1,140 @@
+*{
+  
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;/* Faz o elemento ocupar toda a altura do ion-content */
+    text-align: center; 
+    width:100%;
+}
+ion-list{
+    width: 90%;
+    background-color: none;
+}
+ion-text,ion-input{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 1000px;
+  font-style: normal;
+}
+ion-input.custom {
+    --background: none;
+    --background-hover: none;
+    --color: #fff;
+    --placeholder-color: #ffffff;
+    --background-activated: none;
+    --placeholder-opacity: 0.8;
+    --padding-bottom: 10px;
+    --padding-end: 10px;
+    --padding-start: 10px;
+    --padding-top: 10px;
+    text-align: left;
+    font-size: 18px;
+}
+ion-input.custom:hover{
+  --background: none;
+}
+ion-input.custom:active{
+  --background: none;
+}
+ion-button {
+    --background:#ffffff;
+    
+    --background-activated: #ffffff;
+    --background-focused: #000000;
+    
+    --color-activated: #000000;
+    cursor:pointer;
+    --color: rgb(14, 13, 13);
+    --border-radius: 16px;
+    --border-color: none;
+    --border-style: solid;
+    --border-width: 0px;
+    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+
+    --ripple-color: deeppink;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    display: block;
+    height: 20px;
+    
+  }
+  ion-text >a{
+    color: #fff;
+  }
+  .opcao{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .botaoacessar{
+    --background: #d90b0b;
+    --color:#fff;
+    margin-top:40px;
+  }
+
+  ion-toolbar {
+    --background: none;
+    --color: white;
+  
+    --border-color: none;
+    --border-width: 0px 0;
+    --border-style: none;
+  
+    --min-height: 20px;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    padding-right: 5px;
+  }
+  ion-icon{
+    margin-right: 5px;
+  }
+  .text{
+    position: absolute;
+    top:0%;
+    left: 50%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    transform: translate(-50%, -50%);
+  }
+  .text >p {
+    font-family: "Jockey One", sans-serif;
+    font-style: regular;
+    font-weight: 400;
+    font-size: 60px;
+    margin-bottom: -90px;
+  }
+
+  .text1{
+    position: relative;
+    right: 10%;
+  }
+  .text2{
+    position: relative;
+    left: 20%;
+  }
+.efeitofundo{
+  position: fixed;
+  top:0;
+  left: 50%;
+  width: 100%;
+  height: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom, rgb(253, 0, 0), rgba(217, 11, 11, 0)); /* Vermelho para transparente */
+  
+}
+.efeitofundo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit; /* Puxa o fundo da div principal */
+  filter: blur(50px);  /* Aplica o efeito de blur */
+  z-index: -1;  /* Para garantir que fique atrás do conteúdo principal */
+  margin: -350px; /* Aumenta o tamanho do blur nas pontas */
+}

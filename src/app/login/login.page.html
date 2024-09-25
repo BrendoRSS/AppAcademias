@@ -1,0 +1,32 @@
+<ion-content [fullscreen]="true">
+  
+  <div class="efeitofundo"></div>
+  <div class="text">
+    <p class="text1"><b>BODY</b></p>
+    <p class="text2"><b>FITNESS</b></p>
+  </div>
+
+  <div class="container">
+
+  
+  <ion-list lines="none" style="background:none;">
+      <ion-input label="E-mail" label-placement="floating" [(ngModel)]="email" fill="solid" placeholder="Digite seu e-mail" class="custom">
+      </ion-input>
+      <ion-input label="Senha" label-placement="floating" fill="solid" [(ngModel)]="senha" placeholder="Digite sua senha" class="custom">
+      </ion-input>
+      <ion-toolbar>
+        <ion-text slot="end"><a [routerLink]="['/trocarsenha']" >Esqueceu a senha?</a></ion-text>
+      </ion-toolbar>
+      <ion-button class="botaoacessar" expand="block" size="default" (click)="enviar()">Acessar</ion-button>
+      <ion-toolbar class="opcao">
+        <ion-text>ou</ion-text>
+      </ion-toolbar>
+      <ion-button expand="block" size="default"><ion-icon class="logo-google" name="logo-google"></ion-icon>Entrar com Google</ion-button>
+
+      <ion-toolbar class="opcao">
+        <ion-text>Ainda não possui uma conta? <u>Cadastre-se</u></ion-text>
+      </ion-toolbar>
+
+  </ion-list>
+</div>
+</ion-content>

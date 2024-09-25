@@ -1,17 +1,112 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header [translucent]="true" >
+  <ion-toolbar class="header-top-page">
     <ion-title>
-      Tab 1
+      <ion-icon class="person"></ion-icon>
+      <ion-text>Brendo Silva</ion-text>
+
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title color="white">Meu progresso</ion-card-title>
+      
+    </ion-card-header>
+    <ion-card-content>
+      25 de Setembro 
+    </ion-card-content>
+  </ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="10">
+          <!-- O elemento canvas -->
+          <canvas #lineChart></canvas>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <!--Cada card que irá aparecer-->
+        <ion-card>
+          <ion-row>
+            <ion-col>
+              <!--Cada elemento que irá aparecer por card-->
+              <ion-card>
+                <ion-card-title>THU</ion-card-title>
+                <ion-card-subtitle>12</ion-card-subtitle>
+              </ion-card>
+            </ion-col>
+            <ion-col>
+              <ion-card>
+                <ion-card-title>Steps</ion-card-title>
+                <ion-card-subtitle>1.212</ion-card-subtitle>
+              </ion-card>
+            </ion-col>
+            <ion-col>
+              <ion-card>
+                <ion-card-title>Duration</ion-card-title>
+                
+                <ion-card-subtitle> 1.212</ion-card-subtitle>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+        <ion-card>
+          <ion-row>
+            <ion-col>
+              <!--Cada elemento que irá aparecer por card-->
+              <ion-card>
+                <ion-card-title>THU</ion-card-title>
+                <ion-card-subtitle>12</ion-card-subtitle>
+              </ion-card>
+            </ion-col>
+            <ion-col>
+              <ion-card>
+                <ion-card-title>Steps</ion-card-title>
+                <ion-card-subtitle>1.212</ion-card-subtitle>
+              </ion-card>
+            </ion-col>
+            <ion-col>
+              <ion-card>
+                <ion-card-title>Duration</ion-card-title>
+                
+                <ion-card-subtitle> 1.212</ion-card-subtitle>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+        <ion-card>
+          <ion-row>
+            <ion-col>
+              <!--Cada elemento que irá aparecer por card-->
+              <ion-card>
+                <ion-card-title>THU</ion-card-title>
+                <ion-card-subtitle>12</ion-card-subtitle>
+              </ion-card>
+            </ion-col>
+            <ion-col>
+              <ion-card>
+                <ion-card-title>Steps</ion-card-title>
+                <ion-card-subtitle>1.212</ion-card-subtitle>
+              </ion-card>
+            </ion-col>
+            <ion-col>
+              <ion-card>
+                <ion-card-title>Duration</ion-card-title>
+                
+                <ion-card-subtitle> 1.212</ion-card-subtitle>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+        
+      </ion-col>
+      
+    </ion-row>
+  </ion-grid>
+ 
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
