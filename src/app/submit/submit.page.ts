@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from '../data-service';
 
 @Component({
   selector: 'app-submit',
@@ -8,7 +10,15 @@ import { Component, OnInit } from '@angular/core';
 export class SubmitPage implements OnInit {
  email:String = "";
  senha:String = "";
-  constructor() { }
+ nome:String = "";
+ Cel:String = "";
+ constructor(private router: Router, private dataService: DataService) {
+     
+ }
+ enviarcadastro(){
+  this.router.navigate(['login'])
+ }
+ 
 
   ngOnInit() {
   }
