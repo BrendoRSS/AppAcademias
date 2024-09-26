@@ -1,16 +1,26 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Cronograma de Treino
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Treino</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-item>
+    <ion-select label="Serie" label-placement="floating" [(ngModel)]="selectedOption" (ionChange)="onOptionChange()">
+      <ion-select-option value="serieA">Serie A</ion-select-option>
+      <ion-select-option value="serieB">Serie B</ion-select-option>
+      <ion-select-option value="serieC">Serie C</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <div *ngIf="selectedOption === 'serieA'">
+    <ion-grid>
+      <ion-row>
+        <ion-col>Descrição</ion-col>
+        <ion-col>Quantidade de Repetições</ion-col>
+        <ion-col>Marque quando Concluido</ion-col>
+      </ion-row>
+      <ion-col>Supino Reto com Barra</ion-col>
+      <ion-col>4x 10 repetições</ion-col>
+      <ion-col><ion-checkbox></ion-checkbox></ion-col>
+      <ion-row>
 
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>
