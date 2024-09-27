@@ -1,6 +1,5 @@
 
-
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" style="background-color: black;">
   <ion-item>
     <ion-select label="Serie" label-placement="floating" [(ngModel)]="selectedOption" (ionChange)="onOptionChange()">
       <ion-select-option value="serieA">Serie A</ion-select-option>
@@ -8,19 +7,117 @@
       <ion-select-option value="serieC">Serie C</ion-select-option>
     </ion-select>
   </ion-item>
-  <div *ngIf="selectedOption === 'serieA'">
+  <div *ngIf="selectedOption === 'serieA'" class="serie">
     <ion-grid>
       <ion-row>
-        <ion-col>Descrição</ion-col>
-        <ion-col>Quantidade de Repetições</ion-col>
-        <ion-col>Marque quando Concluido</ion-col>
+        <ion-col col-6>Supino Reto com Barra</ion-col>
+        <ion-col col-3>4x 10 repetições</ion-col>
+        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
       </ion-row>
-      <ion-col>Supino Reto com Barra</ion-col>
-      <ion-col>4x 10 repetições</ion-col>
-      <ion-col><ion-checkbox></ion-checkbox></ion-col>
       <ion-row>
-
+        <ion-col col-6>Supino Inclinado com Halteres</ion-col>
+        <ion-col col-3>4x 10 repetições</ion-col>
+        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>Crucifixo com Halteres</ion-col>
+        <ion-col col-3>3x 15 repetições</ion-col>
+        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>Triceps Pulley</ion-col>
+        <ion-col col-3>4x 10 repetições</ion-col>
+        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>Triceps Testa com Barra</ion-col>
+        <ion-col col-3>3x 10 repetições</ion-col>
+        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>Mergulho entre bancos</ion-col>
+        <ion-col col-3>3x 15 repetições</ion-col>
+        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
       </ion-row>
     </ion-grid>
   </div>
+  <div *ngIf="selectedOption === 'serieB'">
+    <ion-grid>
+    <ion-row>
+      <ion-col col-6>Puxada Aberta na Polia</ion-col>
+      <ion-col col-3>4x 10 repetições</ion-col>
+      <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>Remada Curvada com Barra</ion-col>
+      <ion-col col-3>4x 10 repetições</ion-col>
+      <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>Remada Unilateral com Halteres</ion-col>
+      <ion-col col-3>3x 12 repetições</ion-col>
+      <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>Barra Fixa</ion-col>
+      <ion-col col-3>3x até a falha</ion-col>
+      <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>Rosca Direta com Barra</ion-col>
+      <ion-col col-3>4x 10 repetições</ion-col>
+      <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>Rosca concentrada com Halteres</ion-col>
+      <ion-col col-3>3x 15 repetições</ion-col>
+      <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+    </ion-row>
+  </ion-grid>
+  </div>
+  <div *ngIf="selectedOption === 'serieC'">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6>Agachamento Livre</ion-col>
+        <ion-col col-3>4x de 12 repetições</ion-col>
+        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>Legg Press</ion-col>
+        <ion-col col-3>4x de 12 repetições</ion-col>
+        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>Cadeira Extensora</ion-col>
+        <ion-col col-3>4x de 12 repetições</ion-col>
+        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>Flexora Deitada</ion-col>
+        <ion-col col-3>4x de 12 repetições</ion-col>
+        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>Elevação Lateral Com Halteres</ion-col>
+        <ion-col col-3>4x de 12 repetições</ion-col>
+        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>Desenvolvimento com Halteres</ion-col>
+        <ion-col col-3>4x de 12 repetições</ion-col>
+        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>Elevação Frontal com Halteres</ion-col>
+        <ion-col col-3>4x de 12 repetições</ion-col>
+        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>Abdominal Prancha</ion-col>
+        <ion-col col-3>3x de 2mim</ion-col>
+        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
 </ion-content>
