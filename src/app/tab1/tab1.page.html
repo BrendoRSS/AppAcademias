@@ -1,18 +1,61 @@
-<ion-header [translucent]="true" >
-  <ion-toolbar class="header-top-page">
-    <ion-title>
-      <ion-icon class="person"></ion-icon>
-      <ion-text>Brendo Silva</ion-text>
-
-    </ion-title>
+<ion-header [translucent]="true" class="headerprincipal">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-item slot="end">
+      <ion-icon name="person-circle"></ion-icon>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
+
+<ion-menu menuId="first-menu" contentId="main-content">
+  <ion-header class="headermenuopen">
+    <ion-toolbar class="headermenuopentoolbar">
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding itensmenu">
+    <ion-list>
+      <div class="itemimgperfil" >
+        <img style="display: flex;justify-content: center;" class="imgperfil"
+          src="https://www.rbsdirect.com.br/filestore/6/3/8/4/6/8/4_3a8b593c0e41b43/4864836_6a7061482e39a53.jpg?w=700"
+          alt="The Wisconsin State Capitol building in Madison, WI at night">
+    
+      </div>
+      <ion-item href="/tabs/tab2">
+        <ion-icon color="white" aria-hidden="true" name="person-circle-outline" slot="start"></ion-icon>
+        <ion-label>Dados pessoais</ion-label>
+      </ion-item>
+      <ion-item href="../gerencia-de-cartoes/">
+        <ion-icon color="white" aria-hidden="true" name="card" slot="start"></ion-icon>
+        <ion-label>Gerenciar cartões</ion-label>
+      </ion-item>
+      <ion-item href="../login/">
+        <ion-icon color="white" aria-hidden="true" name="exit" slot="start"></ion-icon>
+        <ion-label>Sair</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <p>Tap a button below to open a specific menu.</p>
+    <ion-button expand="block" (click)="openFirstMenu()">Open First Menu</ion-button>
+  </ion-content>
+</div>
 
 <ion-content [fullscreen]="true">
   <ion-card>
     <ion-card-header>
-      <ion-card-title color="white">Meu progresso</ion-card-title>
-      
+      <ion-card-title class="titleoffblack" color="white">PAINEL</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       25 de Setembro 

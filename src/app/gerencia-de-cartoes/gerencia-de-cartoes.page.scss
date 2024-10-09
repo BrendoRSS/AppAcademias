@@ -1,0 +1,16 @@
+ion-toolbar > ion-button {
+    margin: 10px;
+    height: 45px;
+    --border-radius: 150%;
+    --background: none;
+    --border-style: solid;
+    --border-color: #f00000;
+    --border-width: 0.5px;
+}
+
+ion-button > ion-icon {
+    color: #f00000;
+    --ionicon-width: 50px;
+    --ionicon-height: 40px;
+
+}

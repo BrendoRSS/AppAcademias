@@ -1,5 +1,8 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Chart } from 'chart.js/auto';
+import { MenuController } from '@ionic/angular';
+import { addIcons } from 'ionicons';
+import { card, person, exit } from 'ionicons/icons';
 
 @Component({
   selector: 'app-tab1',
@@ -11,7 +14,9 @@ export class Tab1Page {
 
   line: any;
 
-  constructor() {}
+  constructor(private menuCtrl: MenuController) {
+    addIcons({ card, person, exit });
+  }
 
   ionViewDidEnter() {
     this.createLineChart();
@@ -46,5 +51,8 @@ export class Tab1Page {
         }
       }
     });
+  }
+  openFirstMenu(){
+  this.menuCtrl.open('first-menu')
   }
 }

@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'submit',
     loadChildren: () => import('./submit/submit.module').then( m => m.SubmitPageModule)
+  },
+  {
+    path: 'gerencia-de-cartoes',
+    loadChildren: () => import('./gerencia-de-cartoes/gerencia-de-cartoes.module').then( m => m.GerenciaDeCartoesPageModule)
   }
 ];
 @NgModule({
