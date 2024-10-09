@@ -1,0 +1,15 @@
+.headerprincipal > ion-toolbar{
+    --background:#ff0000;
+    border-radius: 0px 0px 15px 15px;
+  }
+  .headerprincipal > ion-icon{
+    --background: #fff;
+  }
+  
+  ion-row > ion-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+  }

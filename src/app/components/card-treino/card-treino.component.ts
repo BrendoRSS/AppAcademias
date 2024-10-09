@@ -7,8 +7,9 @@ import { Component,Input, OnInit } from '@angular/core';
 })
 export class CardTreinoComponent  implements OnInit {
   @Input() title: string = ''; // Para o título do card
-  @Input() subtitle: string = ''; // Para o subtítulo do card
-  @Input() img: string = '';  // Para o conteúdo do card
+  @Input() serie: string = ''; // Para o subtítulo do card
+  @Input() img: string = '';  // Para imagem
+  @Input() tag: string = '';  // Para tag
 
   constructor() { }
 

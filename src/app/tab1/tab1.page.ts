@@ -29,8 +29,8 @@ export class Tab1Page {
         labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho'],
         datasets: [
           {
-            label: 'Passos por mês',
-            data: [3000, 5000, 4000, 6000, 7000, 9000, 8000], // Dados de exemplo
+            label: 'Treino (min) / Mês',
+            data: [1000, 3000, 2000, 5000, 4000, 7000, 8000], // Dados de exemplo
             fill: false,
             borderColor: '#d90b0b',
             tension: 0.1

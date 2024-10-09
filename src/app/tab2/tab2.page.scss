@@ -1,20 +1,29 @@
 *{
 
 }
+.headerprincipal > ion-toolbar{
+    --background:#ff0000;
+    border-radius: 0px 0px 15px 15px;
+  }
+  .headerprincipal > ion-icon{
+    --background: #fff;
+  }
+
 ion-content{
     --background: #0000;
     --color: white;
 }
-ion-content > div{
-    
-}
+
+
 ion-item{
-    --background:#ff0000;
+    --border-color:#ff0000;
     height: 50px;
     --color: black;
-    --padding:10px;
-    --border-radius: 0px 0px 15px 15px;
+    --padding:20px;
+    --margin-top:10px;
+    --border-radius:15px;
     --border-style:none;
+    
 }
 ion-select{
     color:#fff
@@ -25,7 +34,5 @@ ion-col{
 ion-select{
     font-weight: bold;
 }
-ion-content {
-    --overflow: auto;  /* Ativa a barra de rolagem, se necessário */
-  }
+
   

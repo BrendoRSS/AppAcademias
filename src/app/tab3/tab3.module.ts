@@ -6,6 +6,8 @@ import { Tab3Page } from './tab3.page';
 
 import { Tab3PageRoutingModule } from './tab3-routing.module';
 
+import {CardAlimentacaoDiaComponent} from '../components/card-alimentacao-dia/card-alimentacao-dia.component'
+
 @NgModule({
   imports: [
     IonicModule,
@@ -13,6 +15,6 @@ import { Tab3PageRoutingModule } from './tab3-routing.module';
     FormsModule,
     Tab3PageRoutingModule
   ],
-  declarations: [Tab3Page]
+  declarations: [Tab3Page,CardAlimentacaoDiaComponent]
 })
 export class Tab3PageModule {}

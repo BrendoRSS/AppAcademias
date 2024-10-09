@@ -1,8 +1,15 @@
 
+<ion-header class="headerprincipal" [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Treino
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content [fullscreen]="true">
   <ion-item>
-    <ion-select label="Séries" color="white"  [(ngModel)]="selectedOption" (ionChange)="onOptionChange()">
-      <ion-select-option value="serieA" selected>Série A</ion-select-option>
+    <ion-select color="white"  [(ngModel)]="selectedOption" (ionChange)="onOptionChange()">
+      <ion-select-option value="serieA">Série A</ion-select-option>
       <ion-select-option value="serieB">Série B</ion-select-option>
       <ion-select-option value="serieC">Série C</ion-select-option>
     </ion-select>
@@ -14,7 +21,8 @@
         <app-card-treino
           img="https://www.hipertrofia.org/blog/wp-content/uploads/2017/09/barbell-bench-press.gif"
           title="Supino Reto com Barra"
-          subtitle="4x10"
+          serie="4x10"
+          tag="Peito"
         ></app-card-treino>
         </ion-col>
       </ion-row>
@@ -23,7 +31,8 @@
           <app-card-treino
             img="https://www.mundoboaforma.com.br/wp-content/uploads/2020/12/supino-inclinado-com-halteres.gif"
             title="Supino Inclinado com Halteres"
-            subtitle="4x10"
+            serie="4x10"
+            tag="Peito"
           ></app-card-treino>
           </ion-col>
       </ion-row>
@@ -32,16 +41,8 @@
           <app-card-treino
             img="https://www.hipertrofia.org/blog/wp-content/uploads/2020/06/dumbbell-incline-fly.gif"
             title="Crucifixo com Halteres"
-            subtitle="3x15"
-          ></app-card-treino>
-          </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <app-card-treino
-            img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk35k-oKpy-PQ2P0GwrJ__IeWu-OLZzONecA&s"
-            title="Triceps Pulley"
-            subtitle="4x10"
+            serie="3x15"
+            tag="Peito"
           ></app-card-treino>
           </ion-col>
       </ion-row>
@@ -49,8 +50,19 @@
         <ion-col>
           <app-card-treino
             img="https://www.blog.treinoemalta.com.br/wp-content/uploads/2023/07/Triceps-Pulley-Barra.gif"
+            title="Triceps Pulley"
+            serie="4x10"
+            tag="Tríceps"
+          ></app-card-treino>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <app-card-treino
+            img="https://www.blog.treinoemalta.com.br/wp-content/uploads/2023/07/Triceps-Pulley-Barra.gif"
             title="Triceps Testa com Barra"
-            subtitle="3x10"
+            serie="3x10"
+            tag="Tríceps"
           ></app-card-treino>
         </ion-col>
       </ion-row>
@@ -59,7 +71,8 @@
           <app-card-treino
             img="https://www.mundoboaforma.com.br/wp-content/uploads/2021/03/triceps-mergulho-apoiado-em-dois-bancos.gif"
             title="Mergulho entre bancos"
-            subtitle="3x15 "
+            serie="3x15 "
+            tag="Tríceps"
           ></app-card-treino>
         </ion-col>
       </ion-row>
@@ -68,78 +81,148 @@
   <div *ngIf="selectedOption === 'serieB'">
     <ion-grid>
     <ion-row>
-      <ion-col col-6>Puxada Aberta na Polia</ion-col>
-      <ion-col col-3>4x 10 </ion-col>
-      <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+      <ion-col>
+        <app-card-treino
+          img="https://www.mundoboaforma.com.br/wp-content/uploads/2020/12/costas-puxada-aberta-com-barra-no-pulley.gif"
+          title="Puxada Aberta na Polia"
+          serie="4x10"
+          tag="Costas"
+        ></app-card-treino>
+      </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-6>Remada Curvada com Barra</ion-col>
-      <ion-col col-3>4x 10 </ion-col>
-      <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+      <ion-col>
+        <app-card-treino
+          img="https://www.hipertrofia.org/blog/wp-content/uploads/2024/06/barbell-pendlay-row.gif"
+          title="Remada Curvada com Barra"
+          serie="4x10"
+          tag="Costas"
+        ></app-card-treino>
+      </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-6>Remada Unilateral com Halteres</ion-col>
-      <ion-col col-3>3x 12 </ion-col>
-      <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+      <ion-col>
+      <app-card-treino
+        img="https://static.wixstatic.com/media/2edbed_cf8feb6f79494833b887104bc358843d~mv2.gif"
+        title="Remada Unilateral com Halteres"
+        serie="3x12"
+        tag="Costas"
+      ></app-card-treino>
+    </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-6>Barra Fixa</ion-col>
-      <ion-col col-3>3x até a falha</ion-col>
-      <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+      <ion-col>
+        <app-card-treino
+          img="https://www.mundoboaforma.com.br/wp-content/uploads/2020/12/costas-barra-fixa-pegada-aberta-palma-para-frente-chinup.gif"
+          title="Barra Fixa"
+          serie="3xMáx."
+          tag="Costas"
+        ></app-card-treino>
+      </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-6>Rosca Direta com Barra</ion-col>
-      <ion-col col-3>4x 10 </ion-col>
-      <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+      <ion-col>
+        <app-card-treino
+          img="https://www.hipertrofia.org/blog/wp-content/uploads/2024/02/barbell-standing-close-grip-curl.gif"
+          title="Rosca Direta com Barra"
+          serie="4x10"
+          tag="Bíceps"
+        ></app-card-treino>
+      </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-6>Rosca concentrada com Halteres</ion-col>
-      <ion-col col-3>3x 15 </ion-col>
-      <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+      <ion-col>
+      <app-card-treino
+          img="https://trainings.com.br/app/imgmovimentos/biceps-rosca%20concentrada.gif"
+          title="Rosca concentrada com Halteres"
+          serie="3x15"
+          tag="Bíceps"
+        ></app-card-treino>
+      </ion-col>
     </ion-row>
   </ion-grid>
   </div>
   <div *ngIf="selectedOption === 'serieC'">
     <ion-grid>
       <ion-row>
-        <ion-col col-6>Agachamento Livre</ion-col>
-        <ion-col col-3>4x de 12 </ion-col>
-        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+        <ion-col>
+          <app-card-treino
+              img="https://www.hipertrofia.org/blog/wp-content/uploads/2023/11/dumbbell-goblet-squat.gif"
+              title="Agachamento Livre"
+              serie="4x12"
+              tag="Quadríceps"
+            ></app-card-treino>
+          </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col col-6>Legg Press</ion-col>
-        <ion-col col-3>4x de 12 </ion-col>
-        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+        <ion-col>
+          <app-card-treino
+              img="https://media.tenor.com/yBaS_oBgidsAAAAM/gym.gif"
+              title="Legg Press"
+              serie="4x12"
+              tag="Quadríceps"
+            ></app-card-treino>
+        </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col col-6>Cadeira Extensora</ion-col>
-        <ion-col col-3>4x de 12 </ion-col>
-        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+        <ion-col>
+          <app-card-treino
+              img="https://media.tenor.com/bqKtsSuqilQAAAAM/gym.gif"
+              title="Cadeira Extensora"
+              serie="4x12"
+              tag="Quadríceps"
+            ></app-card-treino>
+        </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col col-6>Flexora Deitada</ion-col>
-        <ion-col col-3>4x de 12 </ion-col>
-        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+        <ion-col>
+          <app-card-treino
+              img="https://media1.tenor.com/m/fj_cZPprAyMAAAAC/gym.gif"
+              title="Flexora Deitada"
+              serie="4x12"
+              tag="Posterior de coxa"
+            ></app-card-treino>
+        </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col col-6>Elevação Lateral Com Halteres</ion-col>
-        <ion-col col-3>4x de 12 </ion-col>
-        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+        <ion-col>
+          <app-card-treino
+              img="https://www.treinoemalta.com.br/wp-content/uploads/2023/07/Elevacao-Lateral-com-Halteres.gif"
+              title="Elevação Lateral Com Halteres"
+              serie="4x12"
+              tag="Ombros"
+            ></app-card-treino>
+        </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col col-6>Desenvolvimento com Halteres</ion-col>
-        <ion-col col-3>4x de 12 </ion-col>
-        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+        <ion-col>
+          <app-card-treino
+              img="https://www.mundoboaforma.com.br/wp-content/uploads/2020/12/desenvolvimento-para-ombros-com-halteres.gif"
+              title="Desenvolvimento com Halteres"
+              serie="4x12"
+              tag="Ombros"
+            ></app-card-treino>
+        </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col col-6>Elevação Frontal com Halteres</ion-col>
-        <ion-col col-3>4x de 12 </ion-col>
-        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+        <ion-col>
+          <app-card-treino
+              img="https://www.hipertrofia.org/blog/wp-content/uploads/2023/11/dumbbell-front-raise.gif"
+              title="Elevação Frontal com Halteres"
+              serie="4x12"
+              tag="Ombros"
+            ></app-card-treino>
+        </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col col-6>Abdominal Prancha</ion-col>
-        <ion-col col-3>3x de 2mim</ion-col>
-        <ion-col col-3><ion-checkbox></ion-checkbox></ion-col>
+        <ion-col>
+          <app-card-treino
+              img="https://www.mundoboaforma.com.br/wp-content/uploads/2020/11/01431301-Bridge-straight-arm_Waist_360_logo.gif"
+              title="Abdominal Prancha"
+              serie="3x2min"
+              tag="Abdômen"
+            ></app-card-treino>
+        </ion-col>
       </ion-row>
     </ion-grid>
   </div>
