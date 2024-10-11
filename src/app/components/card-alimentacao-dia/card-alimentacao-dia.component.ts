@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card-alimentacao-dia',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-alimentacao-dia.component.scss'],
 })
 export class CardAlimentacaoDiaComponent  implements OnInit {
-
+  @Input() alimentacao: string = ''; // Para o tipo de alimentação
+  @Input() nameicon: string = ''; // Para alterar os ícones
   constructor() { }
 
   ngOnInit() {}

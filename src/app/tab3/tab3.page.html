@@ -6,15 +6,83 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-grid [fixed]="true">
+<ion-content [fullscreen]="true" >
+  <ion-grid [fixed]="true" style="display:none">
     <ion-row>
-      <ion-col size="3"><app-card-alimentacao-dia></app-card-alimentacao-dia></ion-col>
-      <ion-col size="3"><app-card-alimentacao-dia></app-card-alimentacao-dia></ion-col>
-      <ion-col size="3"><app-card-alimentacao-dia></app-card-alimentacao-dia></ion-col>
-      <ion-col size="3"><app-card-alimentacao-dia></app-card-alimentacao-dia></ion-col>
+      <ion-col size="3">
+        <ion-button class="custom-parent" value="cafe" (click)="onOptionChange('cafe')">
+          <app-card-alimentacao-dia
+          nameicon="cafe"
+          alimentacao="Café">
+        </app-card-alimentacao-dia>
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button class="custom-parent" (click)="onOptionChange('almoco')">
+          <app-card-alimentacao-dia
+          nameicon="restaurant"
+          alimentacao="Almoço"></app-card-alimentacao-dia>
+        </ion-button>
+        
+      </ion-col>
+      <ion-col size="3">
+        <ion-button class="custom-parent" (click)="onOptionChange('lanche')">
+          <app-card-alimentacao-dia
+          nameicon="fast-food"
+          alimentacao="Lanche"></app-card-alimentacao-dia>
+        </ion-button>
+        </ion-col>
+      <ion-col size="3">
+        <ion-button class="custom-parent" (click)="onOptionChange('janta')">
+          <app-card-alimentacao-dia
+          nameicon="wine"
+          alimentacao="Janta"></app-card-alimentacao-dia>
+        </ion-button>
+        
+      </ion-col>
     </ion-row>
   </ion-grid>
-  
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <app-receitas-gerais></app-receitas-gerais>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid *ngIf="selectedOption==='cafe'">
+    <ion-row>
+      <ion-col>
+        <app-receitas-gerais></app-receitas-gerais>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="selectedOption==='almoco'">
+    <ion-row>
+      <ion-col>
+        <app-receitas-gerais></app-receitas-gerais>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="selectedOption==='lanche'">
+    <ion-row>
+      <ion-col>
+        <app-receitas-gerais></app-receitas-gerais>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="selectedOption==='janta'">
+    <ion-row>
+      <ion-col>
+        <app-receitas-gerais></app-receitas-gerais>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 
 </ion-content>

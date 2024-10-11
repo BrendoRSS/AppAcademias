@@ -1,0 +1,32 @@
+.card-content {
+    display: flex;
+    align-items: center;  /* Alinha os itens verticalmente ao centro */
+  }
+  
+  .card-image {
+    width: 100px;          /* Defina o tamanho desejado para a imagem */
+    height: 100px;
+    object-fit: cover;     /* Faz com que a imagem se ajuste sem distorção */
+    margin-right: 16px;    /* Espaçamento entre a imagem e o texto */
+    --border-radius: 15px;   /* Arredonda as bordas */
+  }
+
+  ion-card ion-img.card-image {
+    border-radius: 15px;
+    /* Outros estilos... */
+  }
+  .text-content {
+    display: flex;
+    flex-direction: column; /* Deixa os textos um abaixo do outro */
+  }
+  .serie{
+    --background:#f00000;
+    --color:#fff;
+    max-width: 50px;
+    
+  }
+  .tag{
+    --background:#000000;
+    --color:#fff;
+    max-width: 85px
+  }

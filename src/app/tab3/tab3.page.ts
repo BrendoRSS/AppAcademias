@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-tab3',
@@ -6,7 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+  selectedOption:string =""
+  constructor() {
 
-  constructor() {}
+  }
+  OnInit(){
+    
+  }
+  onOptionChange(value:string){
+    this.selectedOption = value
+    console.log("Funcionou!")
+    console.log("Clicou em: " , value)
+  }
+
 
 }

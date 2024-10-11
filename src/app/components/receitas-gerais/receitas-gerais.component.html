@@ -1,0 +1,12 @@
+<ion-card *ngFor="let receita of receitas">
+  <div class="card-content">
+    <!-- Imagem alinhada à esquerda -->
+    <ion-img class="card-image" [src]="receita.strMealThumb"></ion-img>
+
+    <!-- Textos ao lado da imagem -->
+    <div class="text-content">
+      <ion-card-title style="display: none;"><b>{{ receita.idMeal }}</b></ion-card-title>
+      <ion-card-title><b>{{ receita.strMeal}}</b></ion-card-title>
+    </div>
+  </div>
+</ion-card>

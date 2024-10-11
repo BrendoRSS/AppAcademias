@@ -13,3 +13,18 @@
     color: #fff;
     text-align: center;
   }
+  ion-button{
+    --background:none;
+    --border-style:none;
+    width: 70px;
+    height: 120px;
+    --border-radius: 0;
+  --border-color: #000;
+  --border-width: 1px;
+  --background-activated:none;
+  --background-hover: none;
+  --box-shadow: none;
+  }
+  .custom-parent{
+    color: #121212;
+  }
