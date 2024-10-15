@@ -8,104 +8,122 @@ ion-menu::part(container) {
   box-shadow: 4px 0px 16px rgba(0, 0, 0, 0.18);
 }
 
-.headerprincipal > ion-toolbar{
-  --background:#ff0000;
+.headerprincipal>ion-toolbar {
+  --background: #ff0000;
   border-radius: 0px 0px 15px 15px;
 }
-.headerprincipal > ion-icon{
+
+.headerprincipal>ion-icon {
   --background: #fff;
-  
+
 }
-ion-item{
+
+ion-item {
   --background: #ff0000;
   --color: #fff;
   --border-style: none;
   --border-radius: 10px;
-  margin-bottom: 10px;
-  margin:10px
+  margin-bottom: 5px;
+  margin: 10px
 }
-ion-item{
+
+ion-item {
   transition: transform 0.3s ease;
 }
+
 ion-item.active {
   animation: pressAnimation 0.5s ease forwards;
 }
+
 @keyframes pressAnimation {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.2);
   }
+
   100% {
     transform: scale(1);
   }
 }
 
 /*Titulo principal "Perfil"*/
-.titleoffblack{
-  color:#fff;
-  font-size:20px;
+.titleoffblack {
+  color: #fff;
+  font-size: 20px;
 }
+
 /*ESTILIZAÇÃO DO MENU*/
-.headermenuopentoolbar{
+.headermenuopentoolbar {
   --background: #ff0000;
 }
-.itemimgperfil{
-  position: relative; /* Contêiner de referência para centralização */
-  height: 200px; /* Defina uma altura fixa */
-  
+
+.itemimgperfil {
+  position: relative;
+  /* Contêiner de referência para centralização */
+  top: 30px;
+  height: 200px;
+  /* Defina uma altura fixa */
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
-.itensmenu{
+
+.imgperfil {
+  border-radius: 50%;
+  /* Faz a imagem ficar redonda */
+  object-fit: cover;
+  /* Garante que a imagem se ajuste corretamente ao círculo */
+  width: 100px;
+  height: 100px;
 }
-.imgperfil{
-    position: absolute; /* Centralização absoluta */
-    top: 50%; /* Centraliza verticalmente */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* Move a imagem para o centro */
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* Faz a imagem ficar redonda */
-    border: 1px solid #ff0000; 
-    object-fit: cover; /* Garante que a imagem se ajuste corretamente ao círculo */
+.perfiltitle{
+  font-size: 13px;
+  color: #fff;
 }
 
 /*Fim da estilização do menu*/
 ion-col {
-    color: #000000;
-    text-align: center;
-    margin: 5px;
-    border-radius: 5px;
-  }
-  ion-grid{
-    margin-bottom: -10px;
-  }
-  ion-row{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  ion-col > ion-card{
+  color: #000000;
+  text-align: center;
+  margin: 5px;
+  border-radius: 5px;
+}
 
-    background-color: #fff;
-    
-  }
-  ion-card {
-    --background: none;
-    box-shadow: none;
-    margin-bottom: 0px;
-  }
-  
-  ion-card-title {
-    font-size: 15px;
-    --color: #000000;
-  }
-  
-  ion-card-subtitle {
-    font-size: 15px;
-    --color: #000;
-  }
-  ion-icon{
-    color: #000;
-  }  
+ion-grid {
+  margin-bottom: -10px;
+}
+
+ion-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+ion-col > ion-card {
+
+  background-color: #fff;
+
+}
+
+ion-card {
+  --background: none;
+  box-shadow: none;
+  margin-bottom: 0px;
+}
+
+ion-card-title {
+  font-size: 15px;
+  --color: #000000;
+}
+
+ion-card-subtitle {
+  font-size: 15px;
+  --color: #000;
+}
+
+ion-icon {
+  color: #000;
+}

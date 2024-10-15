@@ -1,0 +1,26 @@
+ion-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+  ion-card{
+    --background:#434B53;
+    padding:-10px;
+    width: 60px;
+    height: 60px;
+    margin:0px;
+  }
+  ion-card-title{
+    color:#C3DC1C;
+    font-size: 12px;
+    font-weight: bolder;
+  }
+  ion-card-subtitle{
+    color:#fff;
+    font-weight: bolder;
+  }
+  ion-grid{
+    
+  }

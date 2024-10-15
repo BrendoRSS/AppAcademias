@@ -10,6 +10,12 @@ export class ConectionApiNutriService {
 
   constructor() { }
 
+  async traduzir(Dados:string){
+    const url: string = `https://translate.googleapis.com/v3beta1/${Dados}:translateText`
+    const traduzir = await fetch(url);
+    const dadostraduzidos = await traduzir.json();
+    return dadostraduzidos
+  }
   async puxarDados() {
     const url: string = `https://www.themealdb.com/api/json/v1/${this.apiKey}/filter.php?c=${this.diet}`;
     console.log(url);
@@ -24,6 +30,7 @@ export class ConectionApiNutriService {
         const data = await response.json();
 
         //const dataportuguese = data.traduzed()
+        console.log("dadostraduzidos:", this.traduzir(data))
 
         return data;  // Retorna os dados obtidos da API
     } 

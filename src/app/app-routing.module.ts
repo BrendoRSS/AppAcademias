@@ -17,6 +17,10 @@ const routes: Routes = [
   {
     path: 'gerencia-de-cartoes',
     loadChildren: () => import('./gerencia-de-cartoes/gerencia-de-cartoes.module').then( m => m.GerenciaDeCartoesPageModule)
+  },
+  {
+    path: 'dados-pessoais',
+    loadChildren: () => import('./dados-pessoais/dados-pessoais.module').then( m => m.DadosPessoaisPageModule)
   }
 ];
 @NgModule({

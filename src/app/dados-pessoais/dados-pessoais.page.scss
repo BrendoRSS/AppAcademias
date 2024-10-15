@@ -1,0 +1,87 @@
+.headerprincipal>ion-toolbar {
+    --background: #ff0000;
+    border-radius: 0px 0px 15px 15px;
+}
+
+ion-content {
+    --background: #121212;
+}
+
+ion-toolbar {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+}
+
+.imagem-container {
+    position: relative;
+    /* Permite que o ícone se posicione sobre a imagem */
+    display: flex;
+    /* Para usar o flexbox */
+    justify-content: center;
+    /* Centraliza a imagem dentro do contêiner */
+    align-items: center;
+    /* Alinha verticalmente no centro */
+    width: 100%;
+    /* Garante que o contêiner ocupe toda a largura da toolbar */
+}
+
+.imagem-centralizada {
+    display: block;
+    /* Garante que a imagem seja tratada como um bloco */
+    height: 200px;
+    width: 200px;
+    /* Ajuste a altura da imagem conforme necessário */
+    max-width: 100%;
+    /* A imagem não ultrapassa a largura do contêiner */
+    transition: opacity 0.3s ease;
+    /* Efeito de transição para opacidade */
+    border-radius: 50%;
+    /* Arredonda as bordas */
+    object-fit: cover;
+    /* Ajusta a imagem para não ficar distorcida */
+
+}
+
+.icon-lapis {
+    position: absolute;
+    /* Posiciona o ícone sobre a imagem */
+    top: 50%;
+    /* Centraliza verticalmente */
+    left: 50%;
+    /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Ajusta a posição do ícone para centralizar */
+    font-size: 24px;
+    /* Tamanho do ícone */
+    color: white;
+    /* Cor do ícone */
+    opacity: 0;
+    /* Inicialmente invisível */
+    transition: opacity 0.3s ease;
+    /* Efeito de transição para o lápis */
+}
+
+/* Efeito de hover */
+.imagem-container:hover .imagem-centralizada {
+    opacity: 0.5;
+    /* Deixa a imagem opaca ao passar o mouse */
+}
+
+.imagem-container:hover .icon-lapis {
+    opacity: 1;
+    /* Torna o ícone de lápis visível no hover */
+}
+
+ion-back-button {
+    width: 30px;
+}
+.buttonEnviar{
+    display: flex;
+    justify-content: center;
+    --background:#f00000;
+    --border-radius: 20px;
+    --color:#fff;
+}

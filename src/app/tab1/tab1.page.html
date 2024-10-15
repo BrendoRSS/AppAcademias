@@ -19,14 +19,28 @@
   <ion-content class="ion-padding itensmenu">
     <ion-list>
       <div class="itemimgperfil" >
-        <img style="display: flex;justify-content: center;" class="imgperfil"
-          src="https://www.rbsdirect.com.br/filestore/6/3/8/4/6/8/4_3a8b593c0e41b43/4864836_6a7061482e39a53.jpg?w=700"
-          alt="The Wisconsin State Capitol building in Madison, WI at night">
-    
+        <ion-grid [fixed]="true">
+          <ion-row>
+            <ion-col size="auto">
+              <img  class="imgperfil"
+              src="../../assets/img/cbum.jpg"
+              alt="The Wisconsin State Capitol building in Madison, WI at night">
+            </ion-col>
+            <ion-col>
+              <ion-title class="perfiltitle">Brendo Silva</ion-title>
+              <ion-title class="perfiltitle">brendoricardogmail.com</ion-title>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </div>
-      <ion-item href="/tabs/tab2">
+      <app-menu-lateral-atributos></app-menu-lateral-atributos>
+      <ion-item href="../dados-pessoais/">
         <ion-icon color="white" aria-hidden="true" name="person-circle-outline" slot="start"></ion-icon>
         <ion-label>Dados pessoais</ion-label>
+      </ion-item>
+      <ion-item href="../gerencia-de-cartoes/">
+        <ion-icon color="white" aria-hidden="true" name="card" slot="start"></ion-icon>
+        <ion-label>Avaliação física</ion-label>
       </ion-item>
       <ion-item href="../gerencia-de-cartoes/">
         <ion-icon color="white" aria-hidden="true" name="card" slot="start"></ion-icon>
