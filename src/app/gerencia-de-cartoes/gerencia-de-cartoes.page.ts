@@ -8,11 +8,12 @@ import { PageGoBackService } from '../services/page-go-back.service';
 })
 export class GerenciaDeCartoesPage {
 
-  constructor(private voltar:PageGoBackService) { 
+  constructor(private pageReturn:PageGoBackService) { 
 
   }
-  goBack(){
-    this.voltar.goBack()
+  
+  goBackPage(){
+    this.pageReturn.goBack();
   }
 
 }

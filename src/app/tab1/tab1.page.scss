@@ -13,7 +13,7 @@ ion-menu::part(container) {
   border-radius: 0px 0px 15px 15px;
 }
 
-.headerprincipal>ion-icon {
+.headerprincipal > ion-icon {
   --background: #fff;
 
 }
@@ -26,7 +26,10 @@ ion-item {
   margin-bottom: 5px;
   margin: 10px
 }
-
+.ion-item-icon-perfil > ion-icon{
+color:#fff;
+font-size: 30px;
+}
 ion-item {
   transition: transform 0.3s ease;
 }

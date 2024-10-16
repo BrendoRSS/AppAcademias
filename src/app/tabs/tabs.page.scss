@@ -1,0 +1,26 @@
+.ion-tabs-content {
+    --background: #ff0000;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.ion-tab-button {
+    padding: 5px;
+    border-radius: 50%;
+    /* Deixa o botão completamente redondo */
+    width:10px;
+    --background: #fff;
+    /* Cor de fundo do botão */
+    color: white;
+    /* Cor do ícone */
+    margin: 5px;
+    /* Ajuste de margem para espaçar os botões */
+    box-shadow: 0px 0px 30px 0px #000000;
+  margin: 20px; 
+  /* Espaçamento entre os botões */
+}
+
+.ion-tab-button > ion-icon,
+ion-label {
+    --background: #f00000;
+    color: #f00000;
+}

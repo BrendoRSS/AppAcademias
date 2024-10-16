@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: 'dados-pessoais',
     loadChildren: () => import('./dados-pessoais/dados-pessoais.module').then( m => m.DadosPessoaisPageModule)
+  },
+  {
+    path: 'avaliacoes-fisica',
+    loadChildren: () => import('./avaliacoes-fisica/avaliacoes-fisica.module').then( m => m.AvaliacoesFisicaPageModule)
   }
 ];
 @NgModule({
