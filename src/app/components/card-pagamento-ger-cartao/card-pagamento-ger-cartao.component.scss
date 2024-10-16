@@ -1,0 +1,28 @@
+*{
+
+}
+.div{
+    background: #fff;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div > ion-icon{
+    color:#f80000;
+    font-size: 33px;
+    
+}
+.ion-card{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1px;
+    border-radius: 40px 10px 10px 40px;  
+    box-shadow:5px 5px 10px 2px;
+}
+.ion-card > ion-card-title{
+    padding-left: 10px;
+}

@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { Tab4Page } from './tab4.page';
 
 import { Tab4PageRoutingModule } from './tab4-routing.module';
+import { StatusPagamentoComponent } from '../components/status-pagamento/status-pagamento.component';
 
 @NgModule({
   imports: [
@@ -13,6 +14,6 @@ import { Tab4PageRoutingModule } from './tab4-routing.module';
     FormsModule,
     Tab4PageRoutingModule
   ],
-  declarations: [Tab4Page]
+  declarations: [Tab4Page, StatusPagamentoComponent]
 })
 export class Tab4PageModule {}
