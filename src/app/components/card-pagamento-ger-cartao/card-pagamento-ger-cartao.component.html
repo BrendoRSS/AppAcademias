@@ -5,10 +5,86 @@
         <div class="div">
           <ion-icon name="card"></ion-icon>
         </div>
-        <ion-card-title >
+        <ion-card-title>
           8976
         </ion-card-title>
-      </ion-card>      
+      </ion-card>
     </ion-col>
   </ion-row>
 </ion-grid>
+
+<ion-card class="ion-card-button">
+      <ion-fab>
+        <ion-fab-button expand="block" (click)="setOpen(true)">
+
+          <ion-icon name="add"></ion-icon>
+
+        </ion-fab-button>
+      </ion-fab>
+</ion-card>
+
+<ion-modal [isOpen]="isModalOpen">
+  
+  <ng-template>
+    <ion-header class="headerprincipal">
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button (click)="setOpen(false)"><b><ion-icon name="arrow-back-outline" style="font-size: 22px;font-weight: bold;color:#fff"></ion-icon></b></ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <div>
+        <ion-img class="visa" *ngIf="cardBrand == 'visa'" style="height: 200px; object-fit: cover;" src="https://t.ctcdn.com.br/ZMjOsdciyLRqUisD-F1XF5iUdMU=/1080x1080/smart/i611950.jpeg"></ion-img>
+        
+        <ion-img class="mastercard" *ngIf="cardBrand == 'mastercard'" src="https://i0.wp.com/assets.b9.com.br/wp-content/uploads/2016/07/mastercard-novo-logo.jpg?fit=1060%2C596&ssl=1"></ion-img>
+      
+        <ion-img class="amex" *ngIf="cardBrand == 'amex'" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVzGYBu8ficrK1_7npab1DXt92UZiQ-wrIhw&s"></ion-img>
+
+        <ion-img class="elo" *ngIf="cardBrand == 'elo'" src="https://media.elo.com.br/strapi-hml/img_marca_principal_01_6bb1ada92d.png"></ion-img>
+        
+        <ion-img class="hipercard" *ngIf="cardBrand == 'hipercard'" src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/77/2c/21/772c21a8-d877-03cd-28ee-7fda11cc289d/AppIcon-0-0-1x_U007emarketing-0-5-0-0-85-220.png/1200x600wa.png"></ion-img>
+      </div>
+      <form (ngSubmit)="onSubmit()" #cardForm="ngForm">
+        <!-- Nome no Cartão -->
+        <ion-item>
+          <ion-label position="floating">Nome no Cartão</ion-label>
+          <ion-input type="text" required [(ngModel)]="cardName" name="cardName"></ion-input>
+        </ion-item>
+    
+        <!-- Número do Cartão -->
+        <ion-item>
+          <ion-label position="floating">Número do Cartão</ion-label>
+          <ion-input type="tel" required [(ngModel)]="cardNumber" name="cardNumber" maxlength="16" minlength="16" pattern="[0-9]*"></ion-input>
+        </ion-item>
+    
+        <!-- Data de Validade -->
+        <ion-item>
+          <ion-label position="floating">Data de Validade (MM/AA)</ion-label>
+          <ion-input type="text" required [(ngModel)]="expiryDate" name="expiryDate" placeholder="MM/AA" maxlength="5" pattern="\d{2}/\d{2}"></ion-input>
+        </ion-item>
+    
+        <!-- CVV -->
+        <ion-item>
+          <ion-label position="floating">Código de Segurança (CVV)</ion-label>
+          <ion-input type="tel" required [(ngModel)]="cvv" name="cvv" maxlength="3" minlength="3" pattern="[0-9]*"></ion-input>
+        </ion-item>
+    
+        <!-- Bandeira do Cartão (opcional) -->
+        <ion-item>
+          <ion-label position="floating">Bandeira do Cartão</ion-label>
+          <ion-select [(ngModel)]="cardBrand" name="cardBrand" placeholder="Selecione a bandeira">
+            <ion-select-option value="visa">Visa</ion-select-option>
+            <ion-select-option value="mastercard">MasterCard</ion-select-option>
+            <ion-select-option value="amex">American Express</ion-select-option>
+            <ion-select-option value="elo">Elo</ion-select-option>
+            <ion-select-option value="hipercard">Hipercard</ion-select-option>
+          </ion-select>
+        </ion-item>
+    
+        <!-- Botão de Enviar -->
+        <ion-button expand="block" type="submit" [disabled]="!cardForm.form.valid">Cadastrar</ion-button>
+      </form>
+    </ion-content>
+  </ng-template>
+</ion-modal>
