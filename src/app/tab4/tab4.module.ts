@@ -6,6 +6,7 @@ import { Tab4Page } from './tab4.page';
 
 import { Tab4PageRoutingModule } from './tab4-routing.module';
 import { StatusPagamentoComponent } from '../components/status-pagamento/status-pagamento.component';
+import { HistoricoPagamentoComponent } from '../components/historico-pagamento/historico-pagamento.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { StatusPagamentoComponent } from '../components/status-pagamento/status-
     FormsModule,
     Tab4PageRoutingModule
   ],
-  declarations: [Tab4Page, StatusPagamentoComponent]
+  declarations: [Tab4Page, StatusPagamentoComponent, HistoricoPagamentoComponent]
 })
 export class Tab4PageModule {}
