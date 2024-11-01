@@ -8,13 +8,16 @@ import { ConectionApiNutriService } from 'src/app/services/conection-api-nutri.s
 })
 
 export class ReceitasGeraisComponent implements OnInit {
- 
+
   @Input() id: number = -1;
-  @Input() title: string = ''; // Para o título do card
-  @Input() img: string = '';  // Para imagem
+  @Input() title: string = '';
+  @Input() img: string = '';
   receitas: any[] = [];
 
-  constructor(public GenerateNutri: ConectionApiNutriService) { }
+  isModalOpen = false; // Controla a visibilidade do modal
+  selectedReceita: any = null; // Armazena a receita selecionada para o modal
+
+  constructor(public GenerateNutri: ConectionApiNutriService) {}
 
   ngOnInit() {
     this.obterReceitas();
@@ -22,16 +25,46 @@ export class ReceitasGeraisComponent implements OnInit {
 
   async obterReceitas(): Promise<void> {
     try {
-        const data: any = await this.GenerateNutri.puxarDados(); // Aguarda a requisição
-
-        console.log('Dados obtidos:', data); // Verifica o que foi obtido
-
-        this.receitas = data.meals; // Atribui os resultados aos dados
-
-        console.log('Receitas:', this.receitas); // Verifica as receitas atribuídas
-
+      const data: any = await this.GenerateNutri.puxarDados();
+      this.receitas = data.meals;
     } catch (erro) {
-        console.error('Erro ao obter receitas:', erro); // Lida com erros
+      console.error('Erro ao obter receitas:', erro);
     }
-}
+  }
+
+  async info(id: string) {
+    try {
+      const res = await this.GenerateNutri.puxarPorId(id);
+      this.selectedReceita = res.meals[0]; // Atribui o primeiro objeto do array
+      console.log('Detalhes da receita:', this.selectedReceita);
+    } catch (error) {
+      console.error("Erro ao buscar a receita:", error);
+    }
+  }
+
+  openModal(idReceita: any) {
+    this.isModalOpen = true;
+    this.info(idReceita); // Busca dados da receita ao abrir o modal
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+    this.selectedReceita = null;
+  }
+
+  getIngredientes(receita: any): string[] {
+    const ingredientes: string[] = [];
+    for (let i = 1; i <= 20; i++) {
+      const ingrediente = receita[`strIngredient${i}`];
+      const medida = receita[`strMeasure${i}`];
+      if (ingrediente) {
+        ingredientes.push(`${ingrediente} - ${medida || ''}`);
+      }
+    }
+    return ingredientes;
+  }
+  getVideoUrl(videoUrl: string): string {
+    // Transforma o link do YouTube no formato que pode ser usado no iframe
+    return videoUrl ? videoUrl.replace('watch?v=', 'embed/') : '';
+  }
 }

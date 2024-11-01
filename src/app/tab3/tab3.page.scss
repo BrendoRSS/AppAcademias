@@ -5,6 +5,9 @@
   .headerprincipal > ion-icon{
     --background: #fff;
   }
+  ion-content{
+    --background: #121212;
+  }
   
   ion-row > ion-col{
     display: flex;

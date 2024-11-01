@@ -1,43 +1,57 @@
 import { Injectable } from '@angular/core';
+import { TradutorPtBRService } from './tradutor-pt-br.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConectionApiNutriService {
   
-  diet: string = "Vegetarian"
+  diet: string = "Vegetarian";
   apiKey: string = "1"; 
 
-  constructor() { }
+  constructor(private tradutorPtBr: TradutorPtBRService) { }
 
-  async traduzir(Dados:string){
-    const url: string = `https://translate.googleapis.com/v3beta1/${Dados}:translateText`
-    const traduzir = await fetch(url);
-    const dadostraduzidos = await traduzir.json();
-    return dadostraduzidos
-  }
   async puxarDados() {
     const url: string = `https://www.themealdb.com/api/json/v1/${this.apiKey}/filter.php?c=${this.diet}`;
-    console.log(url);
-
+    
     try {
-        const response = await fetch(url);
-        console.log("Resnpose: ", response)
-        if (!response.ok) {
-            throw new Error(`Erro: ${response.status}`);
-        }
+      // Definindo o tipo explicitamente
+      const dadostraduzidos: { meals: { strMeal: string; strMealThumb: string; idMeal: string }[] } = { meals: [] };
+      
+      const response = await fetch(url);
 
-        const data = await response.json();
+      if (!response.ok) {
+        throw new Error(`Erro: ${response.status}`);
+      }
 
-        //const dataportuguese = data.traduzed()
-        console.log("dadostraduzidos:", this.traduzir(data))
+      const data = await response.json();
 
-        return data;  // Retorna os dados obtidos da API
+      // Itera sobre as refeições e traduz cada nome de refeição
+      //está limitando a tradução
+      /*
+      for (const meal of data.meals) {
+        const nomeTraduzido = await this.tradutorPtBr.traduzirJSON(meal.strMeal);
+        dadostraduzidos.meals.push({
+          strMeal: nomeTraduzido,
+          strMealThumb: meal.strMealThumb,
+          idMeal: meal.idMeal
+        });
+      }*/
+
+      return data;  // Retorna os dados no formato desejado, com traduções
     } 
     catch (error) {
-        console.error('Erro ao buscar receitas:', error);
-        throw error;  // Re-lança o erro para tratamento posterior
+      console.error('Erro ao buscar receitas:', error);
+      throw error;  // Re-lança o erro para tratamento posterior
     }
+  }
+  async puxarPorId(id:string){
+    const url: string = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Erro: ${response.status}`);
+    }
+    const data = await response.json();
+    return data
+  }
 }
-}
-

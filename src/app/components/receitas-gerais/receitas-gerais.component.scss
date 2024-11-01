@@ -30,3 +30,12 @@
     --color:#fff;
     max-width: 85px
   }
+  .buttonMore{
+    width: 90px;
+    --background: #fff;
+    --color:#000000;
+  }
+  ion-toolbar{
+    --background: #ff0000;
+    border-radius: 0px 0px 15px 15px;
+  }

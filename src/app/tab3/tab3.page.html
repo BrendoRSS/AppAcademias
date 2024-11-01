@@ -7,6 +7,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" >
+  <!--GRID DE ALIMENTAÇÕES POR DIA COM SEPARAÇÃO POR TÓPICOS -->
   <ion-grid [fixed]="true" style="display:none">
     <ion-row>
       <ion-col size="3">
@@ -38,20 +39,9 @@
           nameicon="wine"
           alimentacao="Janta"></app-card-alimentacao-dia>
         </ion-button>
-        
       </ion-col>
     </ion-row>
   </ion-grid>
-
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <app-receitas-gerais></app-receitas-gerais>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
-
   <ion-grid *ngIf="selectedOption==='cafe'">
     <ion-row>
       <ion-col>
@@ -83,6 +73,19 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+<!-- FIM Grid de alimentações por dia-->
+
+<!-- GRID GERAL QUE ESTÁ SENDO UTILIZADA-->
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <app-receitas-gerais></app-receitas-gerais>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+<!-- FIM DA GRID GERAL QUE ESTÁ SENDO UTILIZADA-->
+
+  
 
 
 </ion-content>
