@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "102857113188",
+    "project_id": "appacademiafullsystem",
+    "storage_bucket": "appacademiafullsystem.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102857113188:android:8f521c3a4529ee5a976971",
+        "android_client_info": {
+          "package_name": "br.com.fullsystemtecnologias.bodyfitnessapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1F6lMpyEiB1G9CczNvVOQBiPsAXZEJrc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

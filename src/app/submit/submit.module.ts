@@ -5,7 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { SubmitPageRoutingModule } from './submit-routing.module';
-
+import { initializeApp } from "firebase/app";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { SubmitPage } from './submit.page';
 
 @NgModule({
@@ -17,4 +18,5 @@ import { SubmitPage } from './submit.page';
   ],
   declarations: [SubmitPage]
 })
+
 export class SubmitPageModule {}

@@ -4,6 +4,14 @@
 
 export const environment = {
   production: false
+  firebaseConfig : {
+    apiKey: "preencha aqui",
+  authDomain: "preencha aqui",
+  projectId: "preencha aqui",
+  storageBucket: "preencha aqui",
+  messagingSenderId: "preencha aqui",
+  appId: "preencha aqui"
+  }
 };
 
 /*
