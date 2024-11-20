@@ -63,8 +63,4 @@ export class ReceitasGeraisComponent implements OnInit {
     }
     return ingredientes;
   }
-  getVideoUrl(videoUrl: string): string {
-    // Transforma o link do YouTube no formato que pode ser usado no iframe
-    return videoUrl ? videoUrl.replace('watch?v=', 'embed/') : '';
-  }
 }

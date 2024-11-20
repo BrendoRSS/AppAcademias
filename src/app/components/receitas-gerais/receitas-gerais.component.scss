@@ -4,15 +4,16 @@
   }
   
   .card-image {
-    width: 100px;          /* Defina o tamanho desejado para a imagem */
+    min-width: 120px; /* Defina o tamanho minimo desejado para a imagem */
     height: 100px;
     object-fit: cover;     /* Faz com que a imagem se ajuste sem distorção */
     margin-right: 16px;    /* Espaçamento entre a imagem e o texto */
-    --border-radius: 15px;   /* Arredonda as bordas */
+    
+    overflow: hidden  
   }
 
   ion-card ion-img.card-image {
-    border-radius: 15px;
+    --border-radius: 20px 0 20px 0; /* Arredonda as bordas */
     /* Outros estilos... */
   }
   .text-content {
@@ -38,4 +39,9 @@
   ion-toolbar{
     --background: #ff0000;
     border-radius: 0px 0px 15px 15px;
+  }
+  .verInfoButton{
+    width: 120px;
+    --color:#000000;
+    --background:#fff;
   }

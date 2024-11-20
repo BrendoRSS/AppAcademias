@@ -5,65 +5,82 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './historico-pagamento.component.html',
   styleUrls: ['./historico-pagamento.component.scss'],
 })
-export class HistoricoPagamentoComponent  implements OnInit {
+export class HistoricoPagamentoComponent implements OnInit {
+  historico: boolean = true
 
   constructor() { }
-  statusPagamento: string = "" ;
-  mes: String = "";
-  vencimento: number = 0;
-  status: String = "";
+
+  statusPagamento: string = "";
+  dataPagamento: string =""
+  mes: string = "";
+  diaVencimento: number = 0;
+  status: string = "A Pagar";
+
   ngOnInit() {
     this.verificaData();
   }
-  verificaData(){
-    const Adata = new Date();
-    const diaData = Adata.getDate();
 
-    //Dia de Referência
-    const diaReferenciamin = 5;
-    const diaReferenciamax = 10;
+  verificaData() {
+
+    // Pega a data atual
+    const Adata = new Date();
+    // Pega o dia da data atual
+    const diaData = Adata.getDate();
+    //Pega o mês da data atual
+    const mesData = Adata.getMonth() + 1;
+    this.dataPagamento = `${diaData}/${mesData}` 
 
     //definindo meses
     let mesEscrito = "";
-    const mesReferencia = Adata.getMonth() - 1;
-    if (mesReferencia == 1){
-        mesEscrito = "JAN";
-    }else if (mesReferencia == 2){
-      mesEscrito = "FEV";
-    }else if (mesReferencia == 3){
-      mesEscrito = "MAR";
-    }else if (mesReferencia == 4){
-      mesEscrito = "ABR";
-    }else if (mesReferencia == 5){
-      mesEscrito = "MAI";
-    }else if (mesReferencia == 6){
-      mesEscrito = "JUN";
-    }else if (mesReferencia == 7){
-      mesEscrito = "JUL";
-    }else if (mesReferencia == 8){
-      mesEscrito = "AGO";
-    }else if (mesReferencia == 9){
-      mesEscrito = "SET";
-    }else if (mesReferencia == 10){
-      mesEscrito = "OUT";
-    }else if (mesReferencia == 11){
-      mesEscrito = "NOV";
-    }else if (mesReferencia == 12){
-      mesEscrito = "DEZ";
-    }
 
     //Definindo data de vencimento
-    const vencimento = Adata.getDate() + 7
+    const diaVencimento = 20
 
-    if (diaData >= diaReferenciamin || diaData <= diaReferenciamax) {
-      this.mes = mesEscrito;
-      this.vencimento = vencimento;
+    if (diaData <= diaVencimento ) {
+      this.diaVencimento = diaVencimento;
       this.status = "A Pagar"
     }
-    else{
-      this.mes = mesEscrito;
-      this.vencimento = vencimento;
-      this.status = "Vencido"
+
+    switch (mesData) {
+      case 1:
+        this.mes = "JAN";
+        return
+      case 2:
+        this.mes = "FEV";
+        return;
+      case 3:
+        this.mes = "MAR";
+        return
+      case 4:
+        this.mes = "ABR"
+        return
+      case 5:
+        this.mes = "MAI"
+        return 
+      case 6:
+        this.mes = "JUN"
+        return
+      case 7:
+        this.mes = "JUl"
+        return 
+      case 8:
+        this.mes = "AGO"
+        return 
+      case 9:
+        this.mes = "SET"
+        return
+      case 10:
+        this.mes = "OUT"
+        return
+      case 11:
+        this.mes = "NOV"
+        return
+      case 12:
+        this.mes = "DEZ"
+        return
+      default:
+        return;
     }
+
   }
 }

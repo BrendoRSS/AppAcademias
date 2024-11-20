@@ -4,7 +4,7 @@
   }
   
   .card-image {
-    width: 100px;          /* Defina o tamanho desejado para a imagem */
+    min-width: 120px;          /* Defina o tamanho desejado para a imagem */
     height: 100px;
     object-fit: cover;     /* Faz com que a imagem se ajuste sem distorção */
     margin-right: 16px;    /* Espaçamento entre a imagem e o texto */
