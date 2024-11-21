@@ -20,9 +20,6 @@ export class SubmitPage implements OnInit {
     this.usuarioForm = this.formBuilder.group({nome: [''], Cel: [''], email: [''], senha: ['']}) 
  }
 
- enviarcadastro(){
-  
- }
 
 cadastroUsuario(){
   this.db.database.ref('/usuarios').push(this.usuarioForm.value)

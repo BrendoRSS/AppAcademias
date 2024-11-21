@@ -16,9 +16,7 @@ export class LoginPage  {
      
    }
    enviar() {
-    
-      this.router.navigate(['/tabs/tab1']);
-    
+      this.router.navigate(['tabs']);
   }
   cadastrar(){
     this.router.navigate(['submit'])
