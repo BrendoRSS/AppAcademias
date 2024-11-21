@@ -2,9 +2,10 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ConectionApiNutriService } from 'src/app/services/conection-api-nutri.service';
 
 @Component({
-  selector: 'app-receitas-gerais',
-  templateUrl: './receitas-gerais.component.html',
-  styleUrls: ['./receitas-gerais.component.scss'],
+    selector: 'app-receitas-gerais',
+    templateUrl: './receitas-gerais.component.html',
+    styleUrls: ['./receitas-gerais.component.scss'],
+    standalone: false
 })
 
 export class ReceitasGeraisComponent implements OnInit {

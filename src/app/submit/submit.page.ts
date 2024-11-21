@@ -4,9 +4,10 @@ import { DataService } from '../data-service';
 import { AngularFireDatabase } from '@angular/fire/compat/database'; 
 import { FormBuilder, FormGroup } from '@angular/forms'
 @Component({
-  selector: 'app-submit',
-  templateUrl: './submit.page.html',
-  styleUrls: ['./submit.page.scss'],
+    selector: 'app-submit',
+    templateUrl: './submit.page.html',
+    styleUrls: ['./submit.page.scss'],
+    standalone: false
 })
 export class SubmitPage implements OnInit {
  email:String = '';

@@ -1,9 +1,10 @@
 import { Component,Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-card-treino',
-  templateUrl: './card-treino.component.html',
-  styleUrls: ['./card-treino.component.scss'],
+    selector: 'app-card-treino',
+    templateUrl: './card-treino.component.html',
+    styleUrls: ['./card-treino.component.scss'],
+    standalone: false
 })
 export class CardTreinoComponent  implements OnInit {
   @Input() title: string = ''; // Para o título do card

@@ -2,9 +2,10 @@ import { Component} from '@angular/core';
 import { PageGoBackService } from '../services/page-go-back.service';
 
 @Component({
-  selector: 'app-gerencia-de-cartoes',
-  templateUrl: './gerencia-de-cartoes.page.html',
-  styleUrls: ['./gerencia-de-cartoes.page.scss'],
+    selector: 'app-gerencia-de-cartoes',
+    templateUrl: './gerencia-de-cartoes.page.html',
+    styleUrls: ['./gerencia-de-cartoes.page.scss'],
+    standalone: false
 })
 export class GerenciaDeCartoesPage {
   constructor(private pageReturn:PageGoBackService) { 
