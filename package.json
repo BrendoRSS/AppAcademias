@@ -9,16 +9,16 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@angular-devkit/build-angular": "^16.0.0",
-    "@angular/cli": "^16.0.0"
+    "@angular-devkit/build-angular": "^18.2.10",
+    "@angular/cli": "^18.2.10",
+    "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@angular/core": "^16.0.0",
-    "@angular/common": "^16.0.0",
-    "@angular/platform-browser": "^16.0.0",
-    "@angular/fire": "^17.0.0",
-    "@ionic/angular": "^7.0.0",
-    "chart.js": "^4.4.6",
-    "firebase": "^11.0.0"
+    "@angular/common": "^18.2.10",
+    "@angular/core": "^18.2.10",
+    "@angular/platform-browser": "^18.2.10",
+    "@angular/platform-browser-dynamic": "^19.0.0",
+    "@ionic/angular": "^7.8.6",
+    "chart.js": "^4.4.6"
   }
 }
