@@ -10,20 +10,21 @@
 
   
   <ion-list lines="none" style="background:none;">
-      <ion-input label="Nome Completo" label-placement="floating" [(ngModel)]="nome" fill="solid" placeholder="Digite seu nome completo" class="custom">
+    <form [formGroup]="usuarioForm">
+      <ion-input label="Nome Completo" label-placement="floating" formControlName="nome" fill="solid" placeholder="Digite seu nome completo" class="custom">
       </ion-input>
-      <ion-input type= "number" label="Celular" label-placement="floating" [(ngModel)]="Cel" fill="solid" placeholder="(XX)XXXXX-XXXX" class="custom">
+      <ion-input type= "number" label="Celular" label-placement="floating" formControlName="Cel" fill="solid" placeholder="(XX)XXXXX-XXXX" class="custom">
       </ion-input>
-      <ion-input label="E-mail" label-placement="floating" [(ngModel)]="email" fill="solid" placeholder="Digite seu e-mail" class="custom">
+      <ion-input label="E-mail" label-placement="floating" formControlName="email" fill="solid" placeholder="Digite seu e-mail" class="custom">
       </ion-input>
-      <ion-input label="Senha" label-placement="floating" fill="solid" [(ngModel)]="senha" placeholder="Digite sua senha" class="custom">
+      <ion-input label="Senha" label-placement="floating" fill="solid" formControlName="senha" placeholder="Digite sua senha" class="custom">
       </ion-input>
       <ion-button class="botaoacessar" expand="block" size="default" (click)="cadastroUsuario()" >Cadastrar</ion-button>
       <ion-toolbar class="opcao">
         <ion-text>ou</ion-text>
       </ion-toolbar>
       <ion-button expand="block" size="default"><ion-icon class="logo-google" name="logo-google"></ion-icon>Cadastre com Google</ion-button>
-
+    </form>
       
 
   </ion-list>
