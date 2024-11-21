@@ -10,14 +10,18 @@
   "description": "",
   "devDependencies": {
     "@angular-devkit/build-angular": "^18.2.11",
-    "@angular/cli": "18.2.11"
+    "@angular/cli": "18.2.11",
+    "@types/jest": "^29.5.14"
   },
   "dependencies": {
+    "@angular/fire": "^18.0.1",
     "@angular/platform-browser-dynamic": "^18.2.10",
     "@capacitor/android": "^6.1.2",
     "@capacitor/cli": "^6.1.2",
     "@capacitor/core": "^6.1.2",
     "@ionic/angular": "^8.3.4",
-    "chart.js": "^4.4.6"
+    "@ionic/angular-toolkit": "^12.1.1",
+    "chart.js": "^4.4.6",
+    "firebase": "^11.0.2"
   }
 }

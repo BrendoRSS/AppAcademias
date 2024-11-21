@@ -16,7 +16,7 @@ export class SubmitPage implements OnInit {
      
  }
  enviarcadastro(){
-  this.router.navigate(['login'])
+  this.router.navigate([''])
  }
  
 
