@@ -10,6 +10,7 @@ export class HistoricoPagamentoComponent implements OnInit {
 
   constructor() { }
 
+
   statusPagamento: string = "";
   dataPagamento: string =""
   mes: string = "";
@@ -33,8 +34,9 @@ export class HistoricoPagamentoComponent implements OnInit {
     //definindo meses
     let mesEscrito = "";
 
-    //Definindo data de vencimento
     const diaVencimento = 20
+
+
 
     if (diaData <= diaVencimento ) {
       this.diaVencimento = diaVencimento;
@@ -83,4 +85,5 @@ export class HistoricoPagamentoComponent implements OnInit {
     }
 
   }
+  
 }
