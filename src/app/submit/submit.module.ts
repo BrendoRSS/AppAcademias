@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { SnapshotAction } from '@angular/fire/compat/database';
+
 import { IonicModule } from '@ionic/angular';
 
 import { SubmitPageRoutingModule } from './submit-routing.module';
