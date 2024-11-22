@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageGoBackService } from './services/page-go-back.service';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth'
 
 
 
@@ -21,6 +22,7 @@ import { PageGoBackService } from './services/page-go-back.service';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
+    AngularFireAuthModule,
   ],
     
   providers: [{ provide: 

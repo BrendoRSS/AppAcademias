@@ -10,9 +10,9 @@
 
   
   <ion-list lines="none" style="background:none;">
-      <ion-input label="E-mail" label-placement="floating" [(ngModel)]="email" fill="solid" placeholder="Digite seu e-mail" class="custom">
+      <ion-input label="E-mail" label-placement="floating" [(ngModel)]="userLogin.email" fill="solid" placeholder="Digite seu e-mail" class="custom">
       </ion-input>
-      <ion-input label="Senha" label-placement="floating" fill="solid" [(ngModel)]="senha" placeholder="Digite sua senha" class="custom">
+      <ion-input label="Senha" label-placement="floating" fill="solid" [(ngModel)]="userLogin.senha" placeholder="Digite sua senha" class="custom">
       </ion-input>
       <ion-toolbar>
         <ion-text slot="end"><a [routerLink]="['/trocarsenha']" >Esqueceu a senha?</a></ion-text>
@@ -26,7 +26,6 @@
       <ion-toolbar class="opcao">
         <ion-text>Ainda não possui uma conta? <u (click)="cadastrar()">Cadastre-se</u></ion-text>
       </ion-toolbar>
-
   </ion-list>
 </div>
 </ion-content>
