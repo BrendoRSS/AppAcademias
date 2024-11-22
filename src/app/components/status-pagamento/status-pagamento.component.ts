@@ -11,5 +11,9 @@ export class StatusPagamentoComponent  implements OnInit {
   constructor() { }
 
   ngOnInit() {}
+  isModalOpen = false;
 
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
+  }
 }

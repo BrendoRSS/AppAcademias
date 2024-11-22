@@ -13,6 +13,24 @@
     padding: 10px;
     background-color: #121212;
     border-style: none;
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px;   
+}
+ion-modal{
+    --background:#121212;
+}
+.ion-header > ion-toolbar{
+    --background:#ff0000;
+    border-radius: 0px 0px 15px 15px;
+}
+.content{
+    --background:#121212;
+    --color:#fff;
+}
+.button-alterar{
+    --background:#fff;
+    --color:#000;
+    margin-left: 10px;
+    width: 70px;
+    height: 10px;
+    font-size: 9px;
 }

@@ -16,4 +16,21 @@ export class AvaliacoesFisicaPage implements OnInit {
   goBackPage(){
     this.pageReturn.goBack();
   }
+  formData = {
+    name: 'Brendo Ricardo Souza da Silva',
+    age: 24,
+    gender: 'Masculino',
+    height: 1.93,
+    weight: 93,
+    bodyFat: 10,
+    waist: 60,
+    hip: 60,
+    chest: 30,
+    observations: 'Sem observações',
+  };
+
+  submitForm() {
+    console.log('Dados do formulário:', this.formData);
+    // Aqui você pode enviar os dados para uma API ou salvar no banco de dados.
+  }
 }

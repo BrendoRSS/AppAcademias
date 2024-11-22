@@ -42,6 +42,30 @@
   }
   .verInfoButton{
     width: 120px;
-    --color:#000000;
-    --background:#fff;
+    --color:#fff;
+    --background:#121212;
+  }
+  .div-img{
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Faz a imagem ocupar todo o contêiner */
+    height: 100%; /* Faz a imagem ocupar todo o contêiner */
+    object-fit: cover; /* Garante que a proporção seja mantida */
+
+  }
+  .div-img > ion-img {
+    width: 100%; /* Faz a imagem ocupar todo o contêiner */
+    height: 100%; /* Faz a imagem ocupar todo o contêiner */
+    object-fit: cover; /* Garante que a proporção seja mantida */
+    
+    
+  }
+  .content {
+      width: 100%; /* Ajuste o tamanho conforme necessário */
+      overflow: hidden; /* Garante que a imagem respeite o contêiner */
+      display: flex; /* Para centralizar a imagem, se necessário */
+      align-items: center;
+      justify-content: center;
+      --background: #121212;
+      --color:#fff
   }

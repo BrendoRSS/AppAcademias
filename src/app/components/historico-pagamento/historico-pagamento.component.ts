@@ -15,7 +15,7 @@ export class HistoricoPagamentoComponent implements OnInit {
   statusPagamento: string = "";
   dataPagamento: string =""
   mes: string = "";
-  diaVencimento: number = 0;
+  diaVencimento: number = 20;
   status: string = "A Pagar";
 
   ngOnInit() {

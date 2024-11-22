@@ -1,23 +1,24 @@
-<ion-text>
+<ion-text color="light">
   <h1>Histórico de pagamento</h1>
 </ion-text>
 
 <ion-card class="first-card" >
   <ion-grid>
     <ion-row>
-      <ion-col size="2">
+      <ion-col size="4">
         <ion-card-title class="card-pagamento" >
           {{mes}} 
         </ion-card-title>
       </ion-col>
-      <ion-col  size="7">
+      <ion-col  size="4">
         <ion-card-title class="card-pagamento" >
-          {{diaVencimento}}
+          {{diaVencimento}}/11
         </ion-card-title>
       </ion-col>
-      <ion-col size="3">
-        <ion-card-title class="card-pagamento" >
-          {{status}}
+      <ion-col size="4">
+        <ion-card-title class="card-pagamento"  >
+          <ion-text color="danger">{{status}}</ion-text>
+          
         </ion-card-title>
       </ion-col>
     </ion-row>
@@ -25,16 +26,59 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col>
+      <ion-col size="4">
         <ion-card-title>
+          OUT 
         </ion-card-title>
       </ion-col>
-      <ion-col>
+      <ion-col size="4">
         <ion-card-title>
+          20/10
         </ion-card-title>
       </ion-col>
-      <ion-col>
+      <ion-col size="4">
         <ion-card-title>
+          <ion-text color="success">Pago</ion-text>
+        </ion-card-title>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-card-title>
+          SET 
+        </ion-card-title>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card-title>
+          20/09
+        </ion-card-title>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card-title>
+          <ion-text color="success">Pago</ion-text>
+        </ion-card-title>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-card-title>
+          AGO 
+        </ion-card-title>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card-title>
+          20/08
+        </ion-card-title>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card-title>
+          <ion-text color="success">Pago</ion-text>
         </ion-card-title>
       </ion-col>
     </ion-row>
