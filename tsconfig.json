@@ -2,10 +2,6 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "strictNullChecks": true,
-    "skipLibCheck": true,
-    "noImplicitAny": false,
-    "esModuleInterop": true,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -16,6 +12,7 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
+    "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
