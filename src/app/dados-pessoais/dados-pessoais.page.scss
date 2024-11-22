@@ -74,7 +74,10 @@ ion-toolbar {
     opacity: 1;
     /* Torna o ícone de lápis visível no hover */
 }
-
+.headerprincipal > ion-toolbar >ion-title {
+    --color:#fff;
+    font-weight: bold;
+} 
 ion-back-button {
     width: 30px;
 }
