@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy, RouterModule } from '@angular/router';
 import { AngularFireModule } from '@angular/fire/compat';
@@ -12,6 +12,7 @@ import { PageGoBackService } from './services/page-go-back.service';
 
 
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -22,7 +23,7 @@ import { PageGoBackService } from './services/page-go-back.service';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
   ],
-    
+  schemas: [CUSTOM_ELEMENTS_SCHEMA], // Adicione este esquema
   providers: [{ provide: 
     RouteReuseStrategy, 
     useClass: 
