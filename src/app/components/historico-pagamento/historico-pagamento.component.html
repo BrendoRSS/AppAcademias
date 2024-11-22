@@ -3,8 +3,11 @@
 </ion-text>
 
 <ion-card class="first-card" >
+  <ion-item>
   <ion-grid>
+
     <ion-row>
+      
       <ion-col size="4">
         <ion-card-title class="card-pagamento" >
           {{mes}} 
@@ -16,14 +19,16 @@
         </ion-card-title>
       </ion-col>
       <ion-col size="4">
-        <ion-card-title class="card-pagamento"  >
-          <ion-text color="danger">{{status}}</ion-text>
-          
+        <ion-card-title class="card-pagamento">
+          <ion-button class="button-pagar">Pagar</ion-button>
         </ion-card-title>
       </ion-col>
+    
     </ion-row>
   </ion-grid>
+</ion-item>
 
+<ion-item>
   <ion-grid>
     <ion-row>
       <ion-col size="4">
@@ -43,7 +48,10 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+</ion-item>
 
+
+<ion-item>
   <ion-grid>
     <ion-row>
       <ion-col size="4">
@@ -63,7 +71,9 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+</ion-item>
 
+<ion-item>
   <ion-grid>
     <ion-row>
       <ion-col size="4">
@@ -83,5 +93,51 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+</ion-item>
+
+<ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-card-title>
+          JUL 
+        </ion-card-title>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card-title>
+          20/07
+        </ion-card-title>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card-title>
+          <ion-text color="success">Pago</ion-text>
+        </ion-card-title>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>
+
+<ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4">
+        <ion-card-title>
+          JUN 
+        </ion-card-title>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card-title>
+          20/06
+        </ion-card-title>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card-title>
+          <ion-text color="success">Pago</ion-text>
+        </ion-card-title>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>
+
 
 </ion-card>

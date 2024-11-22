@@ -8,6 +8,10 @@
   .headerprincipal > ion-icon{
     --background: #fff;
   }
+  .headerprincipal >ion-toolbar >ion-title {
+  --color:#fff;
+  font-weight: bold;
+  }
 
   ion-content{
     --background: #121212;

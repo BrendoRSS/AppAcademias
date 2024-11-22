@@ -1,33 +1,42 @@
-.headerprincipal > ion-toolbar{
-    --background:#ff0000;
-    border-radius: 0px 0px 15px 15px;
-  }
-  .headerprincipal > ion-icon{
-    --background: #fff;
-  }
-  ion-content{
-    --background: #121212;
-  }
-  
-  ion-row > ion-col{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-align: center;
-  }
-  ion-button{
-    --background:none;
-    --border-style:none;
-    width: 70px;
-    height: 120px;
-    --border-radius: 0;
+.headerprincipal > ion-toolbar {
+  --background: #ff0000;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.headerprincipal>ion-icon {
+  --background: #fff;
+}
+
+ion-content {
+  --background: #121212;
+}
+
+.headerprincipal > ion-toolbar > ion-title {
+  --color: #fff;
+  font-weight: bold;
+}
+
+ion-row > ion-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+ion-button {
+  --background: none;
+  --border-style: none;
+  width: 70px;
+  height: 120px;
+  --border-radius: 0;
   --border-color: #000;
   --border-width: 1px;
-  --background-activated:none;
+  --background-activated: none;
   --background-hover: none;
   --box-shadow: none;
-  }
-  .custom-parent{
-    color: #121212;
-  }
+}
+
+.custom-parent {
+  color: #121212;
+}

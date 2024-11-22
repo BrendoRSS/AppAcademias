@@ -11,3 +11,11 @@ ion-text >h1{
 ion-grid{
     background: #fff;
 }
+ion-grid > ion-row > ion-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-pagar{
+    --background:#000000;
+}
