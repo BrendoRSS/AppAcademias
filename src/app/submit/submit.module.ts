@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SubmitPageRoutingModule } from './submit-routing.module';
 import { SubmitPage } from './submit.page';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { SubmitPage } from './submit.page';
     FormsModule,
     IonicModule,
     SubmitPageRoutingModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    RouterModule.forChild([{ path: '', component: SubmitPage }])
   ],
   declarations: [SubmitPage]
 })
