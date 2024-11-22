@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy, RouterModule } from '@angular/router';
 import { AngularFireModule } from '@angular/fire/compat';
@@ -13,6 +13,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth'
 
 
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -24,7 +25,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth'
     AngularFireDatabaseModule,
     AngularFireAuthModule,
   ],
-    
+  schemas: [CUSTOM_ELEMENTS_SCHEMA], // Adicione este esquema
   providers: [{ provide: 
     RouteReuseStrategy, 
     useClass: 
